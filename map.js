@@ -30,7 +30,23 @@ map.on('load', async () => {
     paint: {
       'line-color': '#FF2D95',
       'line-width': 4,
-      'line-opacity': 0.7,
+      'line-opacity': 0.5,
+    },
+  });
+
+  map.addSource('cambridge_route', {
+    type: 'geojson',
+    data: 'https://raw.githubusercontent.com/vis-society/labs/refs/heads/main/lab07/data/cambridge-bike-lanes.geojson',
+  });
+
+  map.addLayer({
+    id: 'cambridge-bike-lanes',
+    type: 'line',
+    source: 'cambridge_route',
+    paint: {
+      'line-color': '#FF2D95',
+      'line-width': 4,
+      'line-opacity': 0.5,
     },
   });
 
