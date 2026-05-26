@@ -94,6 +94,7 @@ map.on('load', async () => {
     map.on('resize', updatePositions);
     map.on('moveend', updatePositions);
     console.log('Stations Array:', stations);
+    console.log(stations[0]);
   } catch (error) {
     console.error('Error loading JSON:', error);
   }
